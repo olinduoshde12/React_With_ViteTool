@@ -1,7 +1,8 @@
+// @ts-ignore
 import React, {useEffect, useState} from "react";
 import Card from "../components/card/card";
 import axios from "axios";
-import {data} from "autoprefixer";
+
 
 interface Data{
     id: number,
@@ -71,7 +72,7 @@ function Home ():JSX.Element{
             <section>
                 <div className={'grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 w-fit relative m-auto'}>
                     {
-                        data.map((value, index) => {
+                        data.map((value) => {
                             return <Card title={value.title} content={value.body}/>
                         })
                     }
